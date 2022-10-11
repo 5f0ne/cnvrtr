@@ -13,7 +13,7 @@ Different functions to convert between hex, dec, bin, ascii etc.
 
 from cnvrtr.Converter import Converter
 
-cnvrtr = Converter()
+cnvrtr = Converter(nonAsciiPlaceholder=".")
 
 leHex = cnvrtr.toLittleEndian("af d0 fe")
 # fed0af
@@ -32,6 +32,9 @@ decToAscii = cnvrtr.decToAscii(65)
 
 hexToAsciiString = cnvrtr.hexToAsciiString("68656c6c6f20776f726c64")
 # hello world
+
+hexToAsciiString = cnvrtr.hexToAsciiString("68656c6c6f20016f726c64")
+# hello .orld
 
 ```
 

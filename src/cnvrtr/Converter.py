@@ -1,6 +1,6 @@
 class Converter():
-    def __init__(self) -> None:
-        pass
+    def __init__(self, nonAsciiPlaceholder=".") -> None:
+        self._nonAsciiPlaceholder = nonAsciiPlaceholder
 
     def toLittleEndian(self, value):
         # example for value = "20 21 00"
@@ -19,7 +19,7 @@ class Converter():
         return int(bin, 2)
 
     def decToAscii(self, dec):
-        result = ""
+        result = self._nonAsciiPlaceholder
         if (dec >= 32 and dec <= 126):
             result = chr(dec) 
         return result
