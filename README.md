@@ -29,6 +29,10 @@ binToDec = cnvrtr.binToDec("11010101")
 
 decToAscii = cnvrtr.decToAscii(65)
 # A
+
+hexToAsciiString = cnvrtr.hexToAsciiString("68656c6c6f20776f726c64")
+# hello world
+
 ```
 
 

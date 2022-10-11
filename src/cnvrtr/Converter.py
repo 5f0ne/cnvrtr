@@ -23,3 +23,14 @@ class Converter():
         if (dec >= 32 and dec <= 126):
             result = chr(dec) 
         return result
+
+    def hexToAsciiString(self, hex):
+        result = ""
+        hexValues = self.__splitHex(hex.lower())
+        for v in hexValues:
+            dec = self.hexToDec(v)
+            result += self.decToAscii(dec)
+        return result
+
+    def __splitHex(self, hex):
+        return " ".join(hex[i:i+2] for i in range(0, len(hex), 2)).split(" ")
